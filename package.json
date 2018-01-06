@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/topzerzar/learning_socket.io/issues"
   },
-  "homepage": "https://github.com/topzerzar/learning_socket.io#readme"
+  "homepage": "https://github.com/topzerzar/learning_socket.io#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
