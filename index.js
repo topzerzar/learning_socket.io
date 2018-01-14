@@ -12,12 +12,20 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
+// listening connection for event incoming socket.
 io.on('connection', (socket) => {
-  console.log('a user connected');
+  // receive event from front
+  socket.on('chat message', (msg) => {
+    console.log(`message: ${msg}`);
+  });
+
+  // default event
   socket.on('disconnect', () => {
     console.log('user disconnected');
   });
 });
+
+
 
 http.listen(PORT, () => {
   console.log(`Listening port ${PORT}`);
